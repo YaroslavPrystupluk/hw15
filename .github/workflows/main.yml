@@ -13,7 +13,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Install dependencies
-        run: cd server && npm ci
+        run: cd server & npm ci
       
       - name: Run ESLint
         run: npm run lint
