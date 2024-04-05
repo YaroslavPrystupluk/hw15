@@ -1,0 +1,12 @@
+# dependencies
+/node_modules
+/build
+
+# Ignore package-lock.json file
+package-lock.json
+
+# Sentry Config File
+.sentryclirc
+
+# Sentry Config File
+.sentryclirc

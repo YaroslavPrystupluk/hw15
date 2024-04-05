@@ -1,0 +1,233 @@
+{
+  message: { method: 'GET', url: '/api/newsposts?page=0&size=3', body: {} },
+  level: 'info',
+  timestamp: '2024-04-02T06:47:57.637Z'
+}
+{
+  message: { method: 'GET', url: '/api/newsposts?page=0&size=3', body: {} },
+  level: 'info',
+  timestamp: '2024-04-02T06:47:57.681Z'
+}
+{
+  message: {
+    method: 'POST',
+    url: '/api/auth/register',
+    body: {
+      email: 'w@w.w',
+      password: '123456789',
+      confirmPassword: '123456789'
+    }
+  },
+  level: 'info',
+  timestamp: '2024-04-02T06:48:18.573Z'
+}
+{
+  message: {
+    method: 'POST',
+    url: '/api/auth/register',
+    body: {
+      email: 'w@w.w',
+      password: '123456789',
+      confirmPassword: '123456789'
+    }
+  },
+  level: 'info',
+  timestamp: '2024-04-02T06:48:42.800Z'
+}
+{
+  message: { method: 'GET', url: '/api/newsposts?page=0&size=3', body: {} },
+  level: 'info',
+  timestamp: '2024-04-02T06:49:19.776Z'
+}
+{
+  message: { method: 'GET', url: '/api/newsposts?page=0&size=3', body: {} },
+  level: 'info',
+  timestamp: '2024-04-02T06:49:19.783Z'
+}
+{
+  message: { method: 'GET', url: '/api/newsposts?page=0&size=3', body: {} },
+  level: 'info',
+  timestamp: '2024-04-02T06:49:43.065Z'
+}
+{
+  message: { method: 'GET', url: '/api/newsposts?page=0&size=3', body: {} },
+  level: 'info',
+  timestamp: '2024-04-02T06:49:43.177Z'
+}
+{
+  message: { method: 'GET', url: '/api/newsposts?page=0&size=3', body: {} },
+  level: 'info',
+  timestamp: '2024-04-02T06:50:09.977Z'
+}
+{
+  message: { method: 'GET', url: '/api/newsposts?page=0&size=3', body: {} },
+  level: 'info',
+  timestamp: '2024-04-02T06:50:10.082Z'
+}
+{
+  message: {
+    method: 'POST',
+    url: '/api/login',
+    body: { email: 'a@a.a', password: '123456789' }
+  },
+  level: 'info',
+  timestamp: '2024-04-02T06:50:22.225Z'
+}
+{
+  message: { method: 'GET', url: '/api/newsposts?page=0&size=3', body: {} },
+  level: 'info',
+  timestamp: '2024-04-02T06:50:26.580Z'
+}
+{
+  message: { method: 'GET', url: '/api/newsposts?page=0&size=3', body: {} },
+  level: 'info',
+  timestamp: '2024-04-02T06:50:26.595Z'
+}
+{
+  message: {
+    method: 'POST',
+    url: '/api/newsposts',
+    body: { title: '1112212', text: 'sdfsdfsfsdfsd' }
+  },
+  level: 'info',
+  timestamp: '2024-04-02T06:50:32.591Z'
+}
+{
+  message: { method: 'GET', url: '/api/newsposts?page=0&size=3', body: {} },
+  level: 'info',
+  timestamp: '2024-04-02T06:50:32.620Z'
+}
+{
+  message: { method: 'GET', url: '/api/newsposts?page=0&size=3', body: {} },
+  level: 'info',
+  timestamp: '2024-04-02T06:50:33.016Z'
+}
+{
+  message: { method: 'GET', url: '/api/newsposts?page=0&size=3', body: {} },
+  level: 'info',
+  timestamp: '2024-04-02T06:51:54.390Z'
+}
+{
+  message: { method: 'GET', url: '/api/newsposts?page=0&size=3', body: {} },
+  level: 'info',
+  timestamp: '2024-04-02T06:51:54.413Z'
+}
+{
+  message: { method: 'GET', url: '/api/newsposts?page=0&size=3', body: {} },
+  level: 'info',
+  timestamp: '2024-04-02T06:52:02.924Z'
+}
+{
+  message: { method: 'GET', url: '/api/newsposts?page=0&size=3', body: {} },
+  level: 'info',
+  timestamp: '2024-04-02T06:52:02.959Z'
+}
+{
+  message: { method: 'GET', url: '/api/newsposts?page=0&size=3', body: {} },
+  level: 'info',
+  timestamp: '2024-04-02T06:53:45.745Z'
+}
+{
+  message: { method: 'GET', url: '/api/newsposts?page=0&size=3', body: {} },
+  level: 'info',
+  timestamp: '2024-04-02T06:53:45.901Z'
+}
+{
+  message: {
+    method: 'POST',
+    url: '/api/auth/register',
+    body: {
+      email: 'w@w.w',
+      password: '123456789',
+      confirmPassword: '123456789'
+    }
+  },
+  level: 'info',
+  timestamp: '2024-04-02T06:54:09.332Z'
+}
+{
+  message: {
+    method: 'POST',
+    url: '/api/auth/register',
+    body: { email: 'aaaa', password: '123', confirmPassword: '' }
+  },
+  level: 'info',
+  timestamp: '2024-04-02T06:54:19.500Z'
+}
+{
+  message: 'Validation error',
+  stack: 'ValidatorError: Validation error\n' +
+    '    at new ValidationError (D:\\Web\\repos\\hw13\\server\\errors\\ValidationError.ts:4:10)\n' +
+    '    at D:\\Web\\repos\\hw13\\server\\server.ts:43:9\n' +
+    '    at Layer.handle [as handle_request] (D:\\Web\\repos\\hw13\\server\\node_modules\\express\\lib\\router\\layer.js:95:5)\n' +
+    '    at next (D:\\Web\\repos\\hw13\\server\\node_modules\\express\\lib\\router\\route.js:149:13)\n' +
+    '    at Route.dispatch (D:\\Web\\repos\\hw13\\server\\node_modules\\express\\lib\\router\\route.js:119:3)\n' +
+    '    at Layer.handle [as handle_request] (D:\\Web\\repos\\hw13\\server\\node_modules\\express\\lib\\router\\layer.js:95:5)\n' +
+    '    at D:\\Web\\repos\\hw13\\server\\node_modules\\express\\lib\\router\\index.js:284:15\n' +
+    '    at Function.process_params (D:\\Web\\repos\\hw13\\server\\node_modules\\express\\lib\\router\\index.js:346:12)\n' +
+    '    at next (D:\\Web\\repos\\hw13\\server\\node_modules\\express\\lib\\router\\index.js:280:10)\n' +
+    '    at serveStatic (D:\\Web\\repos\\hw13\\server\\node_modules\\serve-static\\index.js:75:16)',
+  level: 'error',
+  timestamp: '2024-04-02T06:54:19.512Z'
+}
+{
+  message: {
+    method: 'POST',
+    url: '/api/login',
+    body: { email: 'w@w.w', password: '123456789' }
+  },
+  level: 'info',
+  timestamp: '2024-04-02T06:54:40.078Z'
+}
+{
+  message: { method: 'GET', url: '/api/newsposts?page=0&size=3', body: {} },
+  level: 'info',
+  timestamp: '2024-04-02T06:54:48.956Z'
+}
+{
+  message: { method: 'GET', url: '/api/newsposts?page=0&size=3', body: {} },
+  level: 'info',
+  timestamp: '2024-04-02T06:54:48.972Z'
+}
+{
+  message: {
+    method: 'POST',
+    url: '/api/newsposts',
+    body: { title: 'gdgdfgdfgdf', text: 'dfgdfgdfgdfg' }
+  },
+  level: 'info',
+  timestamp: '2024-04-02T06:54:56.489Z'
+}
+{
+  message: { method: 'GET', url: '/api/newsposts?page=0&size=3', body: {} },
+  level: 'info',
+  timestamp: '2024-04-02T06:54:56.526Z'
+}
+{
+  message: { method: 'GET', url: '/api/newsposts?page=0&size=3', body: {} },
+  level: 'info',
+  timestamp: '2024-04-02T06:54:56.543Z'
+}
+{
+  message: { method: 'GET', url: '/api/newsposts?page=0&size=3', body: {} },
+  level: 'info',
+  timestamp: '2024-04-02T06:55:23.946Z'
+}
+{
+  message: { method: 'GET', url: '/api/newsposts?page=0&size=3', body: {} },
+  level: 'info',
+  timestamp: '2024-04-02T06:55:24.002Z'
+}
+{
+  message: {
+    method: 'POST',
+    url: '/api/auth/register',
+    body: {
+      email: 'q@q.q',
+      password: '12345678',
+      confirmPassword: '12345678'
+    }
+  },
+  level: 'info',
+  timestamp: '2024-04-02T06:55:43.601Z'
+}
