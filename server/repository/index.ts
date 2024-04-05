@@ -1,3 +1,3 @@
-import Repository from "./Repository";
-import DatabaseConnection from "./DatabaseConnection";
-export { Repository, DatabaseConnection };
+import Repository from './Repository'
+import DatabaseConnection from './DatabaseConnection'
+export { Repository, DatabaseConnection }

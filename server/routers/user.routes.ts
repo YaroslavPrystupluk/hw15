@@ -1,12 +1,12 @@
-import { UsersController } from "../controllers";
-import BaseRouter from "./base.routes";
+import { UsersController } from '../controllers'
+import BaseRouter from './base.routes'
 
 class UserRouter extends BaseRouter {
-  constructor() {
-    super(new UsersController());
+  constructor () {
+    super(new UsersController())
   }
 }
 
-const { router } = new UserRouter();
+const { router } = new UserRouter()
 
-export default router;
+export default router

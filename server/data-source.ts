@@ -1,25 +1,24 @@
-import { DataSource, DataSourceOptions } from "typeorm";
-import { SeederOptions } from "typeorm-extension";
-import { config } from "dotenv";
-import "reflect-metadata";
-import { Newspost, User } from "./entity";
-import { MainSeeders } from "./seeds";
-import { userFactory, newpostsFactory } from "./factories";
+/* eslint-disable n/no-path-concat */
+import { DataSource, type DataSourceOptions } from 'typeorm'
+import { type SeederOptions } from 'typeorm-extension'
+import { config } from 'dotenv'
+import 'reflect-metadata'
+import { Newspost, User } from './entity'
+import { MainSeeders } from './seeds'
+import { userFactory, newpostsFactory } from './factories'
 
-config();
+config()
 
-const path = `${__dirname}`;
-console.log(path);
-
-
+const path = `${__dirname}`
+console.log(path)
 
 const options: DataSourceOptions & SeederOptions = {
-  type: "postgres",
-  host: process.env.DB_HOST || "localhost",
+  type: 'postgres',
+  host: process.env.DB_HOST || 'localhost',
   port: Number(process.env.DB_PORT) || 5432,
-  username: process.env.DB_USER || "postgres",
-  password: process.env.DB_PASS || "rootroot",
-  database: process.env.DB_NAME || "typeorm",
+  username: process.env.DB_USER || 'postgres',
+  password: process.env.DB_PASS || 'rootroot',
+  database: process.env.DB_NAME || 'typeorm',
   synchronize: true,
   logging: true,
   entities: [User, Newspost],
@@ -27,7 +26,7 @@ const options: DataSourceOptions & SeederOptions = {
   migrationsRun: false,
   seeds: [MainSeeders],
   factories: [userFactory, newpostsFactory],
-  subscribers: [],
-};
+  subscribers: []
+}
 
-export const AppDataSource = new DataSource(options);
+export const AppDataSource = new DataSource(options)

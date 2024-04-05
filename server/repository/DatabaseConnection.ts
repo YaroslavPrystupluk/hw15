@@ -1,56 +1,57 @@
-import { DataSource, DataSourceOptions } from "typeorm";
-import { SeederOptions } from "typeorm-extension";
-import { config } from "dotenv";
-import "reflect-metadata";
-import {userFactory, newpostsFactory} from "../factories";
-import { Newspost, User } from "../entity";
-import {MainSeeders} from "../seeds";
+/* eslint-disable eol-last */
+import { DataSource, type DataSourceOptions } from 'typeorm'
+import { type SeederOptions } from 'typeorm-extension'
+import { config } from 'dotenv'
+import 'reflect-metadata'
+import { userFactory, newpostsFactory } from '../factories'
+import { Newspost, User } from '../entity'
+import { MainSeeders } from '../seeds'
 
-config();
+config()
 
 class DatabaseConnection {
-  private static instance: DatabaseConnection;
-  private options: DataSourceOptions & SeederOptions;
-  private db: DataSource;
-  private constructor() {
+  private static instance: DatabaseConnection
+  private readonly options: DataSourceOptions & SeederOptions
+  private readonly db: DataSource
+  private constructor () {
     this.options = {
-      type: "postgres",
-      host: process.env.DB_HOST || "localhost",
+      type: 'postgres',
+      host: process.env.DB_HOST || 'localhost',
       port: Number(process.env.DB_PORT) || 5432,
-      username: process.env.DB_USER || "postgres",
-      password: process.env.DB_PASS || "rootroot",
-      database: process.env.DB_NAME || "typeorm",
+      username: process.env.DB_USER || 'postgres',
+      password: process.env.DB_PASS || 'rootroot',
+      database: process.env.DB_NAME || 'typeorm',
       synchronize: true,
       logging: false,
       factories: [userFactory, newpostsFactory],
       entities: [User, Newspost],
       migrations: [],
       seeds: [MainSeeders],
-      subscribers: [],
-    };
-	 this.db = new DataSource(this.options);
+      subscribers: []
+    }
+    this.db = new DataSource(this.options)
 
-	 this.db.initialize();
+    this.db.initialize()
   }
-  public static getInstance(): DatabaseConnection {
+
+  public static getInstance (): DatabaseConnection {
     if (!DatabaseConnection.instance) {
-      DatabaseConnection.instance = new DatabaseConnection();
+      DatabaseConnection.instance = new DatabaseConnection()
     }
-    return DatabaseConnection.instance;
+    return DatabaseConnection.instance
   }
 
-  public async getDB() {
-	
+  public async getDB () {
     try {
-     if (this.db.isInitialized) {
-       return this.db;
-     }
-	  console.log("Data Source has been initialized!");
+      if (this.db.isInitialized) {
+        return this.db
+      }
+      console.log('Data Source has been initialized!')
     } catch (err) {
-      console.error("Error during Data Source initialization", err);
+      console.error('Error during Data Source initialization', err)
     }
-    return this.db;
+    return this.db
   }
 }
 
-export default DatabaseConnection.getInstance();
+export default DatabaseConnection.getInstance()

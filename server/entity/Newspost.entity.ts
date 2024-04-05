@@ -1,21 +1,21 @@
-import { Entity, PrimaryGeneratedColumn, Column, ManyToOne, Index } from "typeorm";
-import { User } from "./User.entity";
+import { Entity, PrimaryGeneratedColumn, Column, ManyToOne, Index } from 'typeorm'
+import { User } from './User.entity'
 
 @Entity()
-@Index(["header", "text"])
+@Index(['header', 'text'])
 export class Newspost {
   @PrimaryGeneratedColumn()
-  id: number;
+    id: number
 
   @Column()
-  header: string;
+    header: string
 
   @Column()
-  text: string;
+    text: string
 
   @Column({ default: false })
-  deleted: boolean;
+    deleted: boolean
 
   @ManyToOne(() => User, (user) => user.newsposts)
-  author: User;
+    author: User
 }

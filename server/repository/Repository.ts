@@ -1,61 +1,61 @@
-import { DataSource } from "typeorm";
-import { INewspost, IParam } from "../interface/interface";
-import DatabaseConnection from "./DatabaseConnection";
-import { Newspost} from "../entity";
+import { type DataSource } from 'typeorm'
+import { type INewspost, type IParam } from '../interface/interface'
+import DatabaseConnection from './DatabaseConnection'
+import { Newspost } from '../entity'
 
 class Repository {
-  private static instance: Repository;
-  private db: DataSource;
+  private static instance: Repository
+  private db: DataSource
 
-  constructor() {
-    this.initializeDB();
+  constructor () {
+    this.initializeDB()
   }
 
-  private async initializeDB(): Promise<void> {
-    this.db = await DatabaseConnection.getDB();
+  private async initializeDB (): Promise<void> {
+    this.db = await DatabaseConnection.getDB()
   }
 
-  public static getInstance(): Repository {
+  public static getInstance (): Repository {
     if (!Repository.instance) {
-      Repository.instance = new Repository();
+      Repository.instance = new Repository()
     }
-    return Repository.instance;
+    return Repository.instance
   }
 
-  async count(table: string) {
-    return await this.db.getRepository(table).count();
+  async count (table: string) {
+    return await this.db.getRepository(table).count()
   }
 
-    async create(table: string, data: INewspost) {
-      return await this.db.getRepository(table).insert(data);
+  async create (table: string, data: INewspost) {
+    return await this.db.getRepository(table).insert(data)
 	 }
 
-  async readAll(table: string, params: IParam) {
+  async readAll (table: string, params: IParam) {
     return await this.db
       .getRepository(Newspost)
-      .createQueryBuilder("newspost")
-      .leftJoinAndSelect("newspost.author", "author")
+      .createQueryBuilder('newspost')
+      .leftJoinAndSelect('newspost.author', 'author')
       .limit(params.size)
       .offset(params.page)
-      .getMany();
+      .getMany()
   }
 
-  async read(table: string, id: number) {
+  async read (table: string, id: number) {
     return await this.db.getRepository(table).findOne({
-      relations: ["author"],
+      relations: ['author'],
       where: {
-        id: id,
-      },
-    });
+        id
+      }
+    })
   }
 
-  async update(table: string, id: number, newData: any) {
-    return await this.db.getRepository(table).update(id, newData);
+  async update (table: string, id: number, newData: any) {
+    return await this.db.getRepository(table).update(id, newData)
   }
 
-  async delete(table: string, id: number) {
-    return await this.db.getRepository(table).delete(id);
+  async delete (table: string, id: number) {
+    return await this.db.getRepository(table).delete(id)
   }
 }
 
-export default Repository.getInstance();
+export default Repository.getInstance()

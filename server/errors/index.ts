@@ -1,4 +1,4 @@
-import { ValidationError } from "./ValidationError";;
-import { NewspostsServiceError } from "./NewspostsServiceError";
+import { ValidationError } from './ValidationError'
+import { NewspostsServiceError } from './NewspostsServiceError'
 
-export { ValidationError, NewspostsServiceError };
+export { ValidationError, NewspostsServiceError }

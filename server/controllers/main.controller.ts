@@ -1,13 +1,14 @@
-import { Request, Response } from 'express'
-import path from 'path';
+import { type Request, type Response } from 'express'
+import path from 'path'
 
 export class MainController {
-	private publicPath: string;
+  private readonly publicPath: string
 
-  constructor() {
-    this.publicPath = path.join(__dirname, "../../client/build");
+  constructor () {
+    this.publicPath = path.join(__dirname, '../../client/build')
   }
-	getStartPage(req: Request, res: Response){
-      res.sendFile(path.join(this.publicPath, "index.html"));
-    };
-} 
+
+  getStartPage (req: Request, res: Response) {
+    res.sendFile(path.join(this.publicPath, 'index.html'))
+  };
+}

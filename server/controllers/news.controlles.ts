@@ -1,8 +1,7 @@
-import { BaseController } from "./base.controller";
+import { BaseController } from './base.controller'
 
 export class NewsController extends BaseController {
-constructor(){
-	super("newspost");
-}
-  
+  constructor () {
+    super('newspost')
+  }
 }

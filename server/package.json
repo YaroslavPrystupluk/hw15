@@ -13,6 +13,8 @@
     "migrations:create": "npm run typeorm migration:create -d ./data-source.ts",
     "migrations:revert": "npm run typeorm migration:revert -d ./data-source.ts",
     "migrations:generate": "npm run typeorm migration:generate -- -d data-source.ts",
+    "lint": "eslint . --ext .ts",
+    "lint:fix": "eslint --fix . --ext .ts",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Yaroslav Prystupliuk",

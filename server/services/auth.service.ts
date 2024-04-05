@@ -1,30 +1,31 @@
-import { DataSource } from "typeorm";
-import { DatabaseConnection } from "../repository";
-import crypto from "crypto";
-import { IUsers } from "../interface/interface";
-import { User } from "../entity";
+import { type DataSource } from 'typeorm'
+import { DatabaseConnection } from '../repository'
+import crypto from 'crypto'
+import { type IUsers } from '../interface/interface'
+import { User } from '../entity'
 
 class AuthRepository {
-  private static instance: AuthRepository;
-  private db: DataSource;
+  private static instance: AuthRepository
+  private db: DataSource
 
-  constructor() {
-    this.initializeDB();
-  }
-  async initializeDB() {
-    this.db = await DatabaseConnection.getDB();
+  constructor () {
+    this.initializeDB()
   }
 
-  hash(password: string) {
-    return crypto.createHash("sha256").update(password).digest("hex");
+  async initializeDB () {
+    this.db = await DatabaseConnection.getDB()
   }
 
-  getUserByEmail(email: string) {
-    return this.db
+  hash (password: string) {
+    return crypto.createHash('sha256').update(password).digest('hex')
+  }
+
+  async getUserByEmail (email: string) {
+    return await this.db
       .getRepository(User)
-      .createQueryBuilder("user")
-      .where("user.email = :email", { email })
-      .getOne();
+      .createQueryBuilder('user')
+      .where('user.email = :email', { email })
+      .getOne()
   }
 
   auth = async (
@@ -32,55 +33,55 @@ class AuthRepository {
     done: (err: Error | null, user?: IUsers | boolean) => void
   ) => {
     if (!token) {
-      return done(new Error("Token not provided"));
+      done(new Error('Token not provided')); return
     }
     try {
-      const unHashedToken = Buffer.from(token, "base64").toString("utf-8");
-      let [email, password] = unHashedToken.split(":");
-      password = this.hash(password);
-      let err: Error | null = null;
-		
+      const unHashedToken = Buffer.from(token, 'base64').toString('utf-8')
+      let [email, password] = unHashedToken.split(':')
+      password = this.hash(password)
+      const err: Error | null = null
+
       const user = await this.db
         .getRepository(User)
-        .createQueryBuilder("user")
-        .where("user.email = :email", { email })
-        .getOne();
+        .createQueryBuilder('user')
+        .where('user.email = :email', { email })
+        .getOne()
 
       if (err) {
-        return done(err);
+        done(err); return
       }
 
       if (!user) {
-        return done(null, false);
+        done(null, false); return
       }
 
       if (user.password !== password) {
-        return done(null, false);
+        done(null, false); return
       }
-      console.log(user);
+      console.log(user)
 
-      return done(null, user);
+      done(null, user)
     } catch (error) {
-      return done(error);
+      done(error)
     }
-  };
-
-  async comparePasswords(password: string, hashedPassword: string) {
-    return this.hash(password) === hashedPassword;
   }
 
-  async generateToken(email: string, password: string) {
-    const salt = process.env.SALT || "12345";
-    const unHashedToken = `${email}:${password}:${salt}`;
-    const hash = Buffer.from(unHashedToken).toString("base64");
-    return hash;
+  async comparePasswords (password: string, hashedPassword: string) {
+    return this.hash(password) === hashedPassword
   }
 
-  static getInstance() {
+  async generateToken (email: string, password: string) {
+    const salt = process.env.SALT || '12345'
+    const unHashedToken = `${email}:${password}:${salt}`
+    const hash = Buffer.from(unHashedToken).toString('base64')
+    return hash
+  }
+
+  static getInstance () {
     if (!AuthRepository.instance) {
-      AuthRepository.instance = new AuthRepository();
+      AuthRepository.instance = new AuthRepository()
     }
-    return AuthRepository.instance;
+    return AuthRepository.instance
   }
 }
-export default AuthRepository.getInstance();
+export default AuthRepository.getInstance()

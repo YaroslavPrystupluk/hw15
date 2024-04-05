@@ -1,14 +1,12 @@
-import { Router } from "express";
-import NewsRoute from "./news.routes";
-import UserRoute from "./user.routes";
+import { type Router } from 'express'
+import NewsRoute from './news.routes'
+import UserRoute from './user.routes'
 
-interface IRouter {
-  [key: string]: Router;
-}
+type IRouter = Record<string, Router>
 
 const Routes: IRouter = {
   newsposts: NewsRoute,
-  user: UserRoute,
-};
+  user: UserRoute
+}
 
-export default Routes;
+export default Routes

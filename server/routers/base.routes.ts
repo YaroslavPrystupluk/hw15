@@ -1,29 +1,29 @@
-import { Router } from "express";
-import { BaseController } from "../controllers";
+import { Router } from 'express'
+import { type BaseController } from '../controllers'
 
 class BaseRouter {
-  public router: Router;
-  private controller: BaseController;
+  public router: Router
+  private readonly controller: BaseController
 
-  constructor(controller: BaseController) {
-    this.router = Router();
-    this.controller = controller;
+  constructor (controller: BaseController) {
+    this.router = Router()
+    this.controller = controller
 
-    this.routes();
+    this.routes()
   }
 
-  routes() {
+  routes () {
     this.router
-      .route("/")
+      .route('/')
       .post(this.controller.create)
-      .get(this.controller.getList);
+      .get(this.controller.getList)
 
     this.router
-      .route("/:id")
+      .route('/:id')
       .get(this.controller.getSingle)
       .put(this.controller.update)
-      .delete(this.controller.delete);
+      .delete(this.controller.delete)
   }
 }
 
-export default BaseRouter;
+export default BaseRouter

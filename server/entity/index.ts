@@ -1,4 +1,4 @@
-import { User } from "./User.entity";
-import { Newspost } from "./Newspost.entity";
+import { User } from './User.entity'
+import { Newspost } from './Newspost.entity'
 
-export { User, Newspost };
+export { User, Newspost }
