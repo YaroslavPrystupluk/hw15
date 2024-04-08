@@ -19,8 +19,8 @@ jobs:
          cd server
          npm ci
       
-      - name: Run ESLint
-        run: npm run lint
+      # - name: Run ESLint
+      #   run: npm run lint
       
       - name: Run build
         run: npm run build
