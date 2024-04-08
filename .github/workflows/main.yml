@@ -14,9 +14,15 @@ jobs:
     steps:
       - name: Get repository code
         uses: actions/checkout@v4
-      - name: Install dependencies
+
+      - name: Install dependencies server
         run: |
          cd server
+         npm ci
+
+      - name: Install dependencies client
+        run: |
+         cd client
          npm ci
       
       - name: Run ESLint
@@ -27,6 +33,6 @@ jobs:
       - name: Run build
         run: |
          cd server
-         npm run build:client
+         npm start
 
 
