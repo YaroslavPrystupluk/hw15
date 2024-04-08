@@ -12,12 +12,12 @@ jobs:
   build-server:
     runs-on: ubuntu-latest
     steps:
+      - name: Get repository code
+        uses: actions/checkout@v4
       - name: Install dependencies
         run: |
          cd server
-         npm install
-         cd ../client
-         npm install
+         npm ci
       
       - name: Run ESLint
         run: npm run lint
