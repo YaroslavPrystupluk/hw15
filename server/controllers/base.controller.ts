@@ -24,6 +24,7 @@ export class BaseController {
       res.status(201)
       res.json({ message: `${this.table} created`, data })
     } catch (error) {
+      console.log(error.message)
       res.status(500)
       res.json({ message: `Error creating ${this.table}` })
     }

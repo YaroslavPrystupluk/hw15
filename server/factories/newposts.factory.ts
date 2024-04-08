@@ -3,7 +3,7 @@ import { Newspost, type User } from '../entity'
 
 export default setSeederFactory(Newspost, (faker, user: User) => {
   const newspost = new Newspost()
-  newspost.header = faker.lorem.sentence()
+  newspost.title = faker.lorem.sentence()
   newspost.text = faker.lorem.paragraph()
   newspost.author = user
 

@@ -1,3 +1,3 @@
-const domain = "http://localhost:8000/api";
+const domain = "http://localhost:3001/api";
 
 export default domain;

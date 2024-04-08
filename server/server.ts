@@ -16,7 +16,7 @@ import { Strategy } from 'passport-http-bearer'
 dotenv.config()
 const validatorService = new Validator()
 
-const PORT: number | string = process.env.PORT || 3000
+const PORT: number | string = process.env.PORT || 3001
 const HOST: string = process.env.HOST || 'localhost'
 const CORS_OPTIONS = {
   origin: 'http://localhost:3000',
