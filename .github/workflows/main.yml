@@ -20,7 +20,9 @@ jobs:
          npm ci
       
       - name: Run ESLint
-        run: npm run lint
+        run: |
+         cd server
+         npm run lint
       
       - name: Run build
         run: |
