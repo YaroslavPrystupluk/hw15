@@ -6,7 +6,6 @@
   "scripts": {
     "start": "npm run build:client && nodemon server.ts",
     "server": "nodemon server.ts",
-	 "build": "npm run build && npm run build:client", 
     "build:client": "cd.. && cd client && npm run build",
     "typeorm": "typeorm-ts-node-commonjs",
     "seed:run": "ts-node ./node_modules/typeorm-extension/bin/cli.cjs seed:run -d ./data-source.ts",
