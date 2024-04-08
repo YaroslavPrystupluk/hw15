@@ -27,6 +27,6 @@ jobs:
       - name: Run build
         run: |
          cd server
-         npm run build
+         npm start
 
 
