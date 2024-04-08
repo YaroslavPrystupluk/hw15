@@ -9,16 +9,14 @@ on:
       - main
 
 jobs:
-  build:
+  build server:
     runs-on: ubuntu-latest
     steps:
-      - name: Install dependencies
-        run: cd server & npm ci
-      
-      - name: Run ESLint
-        run: npm run lint
-      
-      - name: Run build
-        run: npm run build
+    - name: Get repository code
+    - uses: actions/checkout@v2
 
-
+    - name: Install dependencies
+    - run: |
+       cd server
+       npm cli
+	
