@@ -32,7 +32,7 @@ jobs:
       
       - name: Run build
         run: |
-         cd client
+         cd server
          npm run build
 
 
