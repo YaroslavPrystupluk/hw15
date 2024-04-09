@@ -4,7 +4,7 @@
   "description": "news list",
   "main": "server.js",
   "scripts": {
-    "start": "npm run build:client && nodemon server.ts",
+    "start": "ts-node server.ts",
     "server": "nodemon server.ts",
     "build": "tsc",
     "build:client": "cd .. && cd client && npm run build",
