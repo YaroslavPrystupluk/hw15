@@ -19,9 +19,9 @@ const validatorService = new Validator()
 const PORT: number | string = process.env.PORT || 3000
 const HOST: string = process.env.HOST || 'localhost'
 const CORS_OPTIONS = {
-  origin: "https://hw15-server.vercel.app/",
-  optionsSuccessStatus: 200,
-};
+  origin: 'https://hw15-server.vercel.app',
+  optionsSuccessStatus: 200
+}
 
 function logRequest (req: Request, _res: Response, next: NextFunction) {
   logger.info({
