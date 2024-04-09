@@ -1,0 +1,116 @@
+{
+  message: { method: 'GET', url: '/api/newsposts?page=0&size=12', body: {} },
+  level: 'info',
+  timestamp: '2024-04-09T05:05:13.987Z'
+}
+{
+  message: { method: 'GET', url: '/api/newsposts?page=0&size=12', body: {} },
+  level: 'info',
+  timestamp: '2024-04-09T05:05:14.193Z'
+}
+{
+  message: { method: 'GET', url: '/api/newsposts?page=0&size=12', body: {} },
+  level: 'info',
+  timestamp: '2024-04-09T05:16:21.652Z'
+}
+{
+  message: { method: 'GET', url: '/api/newsposts?page=0&size=12', body: {} },
+  level: 'info',
+  timestamp: '2024-04-09T05:16:21.921Z'
+}
+{
+  message: {
+    method: 'POST',
+    url: '/api/auth/register',
+    body: {
+      email: 'test@test.com',
+      password: '123456789',
+      confirmPassword: '123456789'
+    }
+  },
+  level: 'info',
+  timestamp: '2024-04-09T05:16:50.261Z'
+}
+{
+  message: {
+    method: 'POST',
+    url: '/api/login',
+    body: { email: 'test@test.com', password: '123456789' }
+  },
+  level: 'info',
+  timestamp: '2024-04-09T05:17:06.890Z'
+}
+{
+  message: { method: 'GET', url: '/api/newsposts?page=0&size=12', body: {} },
+  level: 'info',
+  timestamp: '2024-04-09T05:17:09.876Z'
+}
+{
+  message: { method: 'GET', url: '/api/newsposts?page=0&size=12', body: {} },
+  level: 'info',
+  timestamp: '2024-04-09T05:17:09.979Z'
+}
+{
+  message: { method: 'GET', url: '/api/newsposts?page=0&size=12', body: {} },
+  level: 'info',
+  timestamp: '2024-04-09T05:17:27.252Z'
+}
+{
+  message: {
+    method: 'POST',
+    url: '/api/newsposts',
+    body: { title: 'Titlt test', text: 'Text test' }
+  },
+  level: 'info',
+  timestamp: '2024-04-09T05:17:27.254Z'
+}
+{
+  message: { method: 'GET', url: '/api/newsposts?page=0&size=12', body: {} },
+  level: 'info',
+  timestamp: '2024-04-09T05:17:27.507Z'
+}
+{
+  message: { method: 'GET', url: '/api/newsposts?page=0&size=12', body: {} },
+  level: 'info',
+  timestamp: '2024-04-09T05:50:45.096Z'
+}
+{
+  message: { method: 'GET', url: '/api/newsposts?page=0&size=12', body: {} },
+  level: 'info',
+  timestamp: '2024-04-09T05:50:45.451Z'
+}
+{
+  message: { method: 'GET', url: '/api/newsposts/1', body: {} },
+  level: 'info',
+  timestamp: '2024-04-09T05:50:57.680Z'
+}
+{
+  message: { method: 'GET', url: '/api/newsposts/1', body: {} },
+  level: 'info',
+  timestamp: '2024-04-09T05:50:57.943Z'
+}
+{
+  message: { method: 'GET', url: '/api/newsposts?page=0&size=12', body: {} },
+  level: 'info',
+  timestamp: '2024-04-09T05:50:59.306Z'
+}
+{
+  message: { method: 'DELETE', url: '/api/newsposts/1', body: {} },
+  level: 'info',
+  timestamp: '2024-04-09T05:50:59.318Z'
+}
+{
+  message: { method: 'GET', url: '/api/newsposts?page=0&size=12', body: {} },
+  level: 'info',
+  timestamp: '2024-04-09T05:50:59.411Z'
+}
+{
+  message: { method: 'GET', url: '/api/newsposts?page=0&size=12', body: {} },
+  level: 'info',
+  timestamp: '2024-04-09T05:51:02.515Z'
+}
+{
+  message: { method: 'GET', url: '/api/newsposts?page=0&size=12', body: {} },
+  level: 'info',
+  timestamp: '2024-04-09T05:51:02.614Z'
+}

@@ -2,13 +2,13 @@ import { Entity, PrimaryGeneratedColumn, Column, ManyToOne, Index } from 'typeor
 import { User } from './User.entity'
 
 @Entity()
-@Index(['header', 'text'])
+@Index(['title', 'text'])
 export class Newspost {
   @PrimaryGeneratedColumn()
     id: number
 
   @Column()
-    header: string
+    title: string
 
   @Column()
     text: string
