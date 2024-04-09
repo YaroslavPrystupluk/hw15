@@ -33,7 +33,7 @@ jobs:
       - name: Run build server
         run: |
          cd server
-         npm build
+         npm run build
 
       - name: Run build client
         run: |
