@@ -26,7 +26,7 @@ const options: DataSourceOptions & SeederOptions = {
   migrationsRun: false,
   seeds: [MainSeeders],
   factories: [userFactory, newpostsFactory],
-  subscribers: [],
-};
+  subscribers: []
+}
 
 export const AppDataSource = new DataSource(options)
