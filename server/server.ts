@@ -29,7 +29,7 @@ const validatorService = new Validator()
 const PORT: number | string = process.env.PORT || 3000
 const HOST: string = process.env.HOST || 'localhost'
 const CORS_OPTIONS = {
-  origin: '*',
+  origin: 'https://newsposts.vercel.app',
   optionsSuccessStatus: 200
 }
 
