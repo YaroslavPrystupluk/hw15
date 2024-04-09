@@ -7,3 +7,5 @@
 
 # Sentry Config File
 .sentryclirc
+.env
+vercel.json
