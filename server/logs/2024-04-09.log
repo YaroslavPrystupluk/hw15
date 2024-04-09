@@ -114,3 +114,23 @@
   level: 'info',
   timestamp: '2024-04-09T05:51:02.614Z'
 }
+{
+  message: { method: 'GET', url: '/api/newsposts?page=0&size=12', body: {} },
+  level: 'info',
+  timestamp: '2024-04-09T05:52:42.399Z'
+}
+{
+  message: { method: 'GET', url: '/api/newsposts?page=0&size=12', body: {} },
+  level: 'info',
+  timestamp: '2024-04-09T05:52:42.692Z'
+}
+{
+  message: { method: 'GET', url: '/api/newsposts?page=48&size=12', body: {} },
+  level: 'info',
+  timestamp: '2024-04-09T05:52:56.284Z'
+}
+{
+  message: { method: 'GET', url: '/api/newsposts?page=0&size=12', body: {} },
+  level: 'info',
+  timestamp: '2024-04-09T05:53:02.151Z'
+}
