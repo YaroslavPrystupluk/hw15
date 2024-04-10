@@ -78,10 +78,10 @@ class App {
 
   private routing (): void {
     this.app.use(express.static(path.join(this.publicPath)))
-   //  this.app.get('/', this.mainController.getStartPage)
-	this.app.get('/', (req: Request, res: Response) => {
-		res.send('Hello World!')
-	})
+    this.app.get('/', this.mainController.getStartPage)
+	// this.app.get('/', (req: Request, res: Response) => {
+	// 	res.send('Hello World!')
+	// })
 
     const createUpdateMiddlewares = [
       validatorMiddleware({
