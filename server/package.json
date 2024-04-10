@@ -4,9 +4,9 @@
   "description": "news list",
   "main": "server.js",
   "scripts": {
-    "start": "node public/server",
+    "start": "node build/server",
     "server": "nodemon server.ts",
-    "build": "tsc",
+    "build": "tsc && node build/server",
     "build:client": "cd .. && cd client && npm run build",
     "typeorm": "typeorm-ts-node-commonjs",
     "seed:run": "ts-node ./node_modules/typeorm-extension/bin/cli.cjs seed:run -d ./data-source.ts",
