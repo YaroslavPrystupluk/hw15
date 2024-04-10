@@ -98,19 +98,19 @@ class App {
     ]
 
     this.app.post(
-      '/api/newsposts',
+      '/newsposts',
       passport.authenticate('bearer', { session: false }),
       createUpdateMiddlewares,
       this.newsController.create
     )
 
     this.app.put(
-      '/api/newsposts/:id',
+      '/newsposts/:id',
       createUpdateMiddlewares,
       this.newsController.update
     )
     this.app.post(
-      '/api/auth/register',
+      '/auth/register',
       createUsersMiddlewares,
       this.usersController.registration
     )
@@ -118,12 +118,12 @@ class App {
     this.app.post('/api/logout', this.authController.logout)
 
     this.app.get(
-      '/api/user',
+      '/user',
       passport.authenticate('bearer', { session: false })
     )
 
     this.app.get(
-      '/api/newsposts/error',
+      '/newsposts/error',
       (_req: Request, _res: Response, next: NextFunction) => {
         try {
           throw new NewspostsServiceError('Error occurred in NewspostsService')
@@ -152,7 +152,7 @@ class App {
     )
 
     Object.keys(Routes).forEach((key: string) => {
-      this.app.use(`/api/${key}`, Routes[key])
+      this.app.use(`/${key}`, Routes[key])
     })
   }
 
