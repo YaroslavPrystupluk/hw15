@@ -19,9 +19,11 @@ const Header: FC = () => {
             aria-label="menu"
             sx={{ mr: 2 }}
           ></IconButton>
+			 <Link style={{ textDecoration: "none" }} to={"/"}>
           <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
             News
           </Typography>
+			 </Link>
           <Link style={{ textDecoration: "none", color: "white" }} to="/registartion">
             <Button color="inherit">Registration</Button>
           </Link>

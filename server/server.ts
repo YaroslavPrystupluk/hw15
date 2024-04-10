@@ -29,7 +29,7 @@ const validatorService = new Validator()
 const PORT: number | string = process.env.PORT || 3000
 const HOST: string = process.env.HOST || 'localhost'
 const CORS_OPTIONS = {
-  origin: '*',
+  origin: 'http://',
   optionsSuccessStatus: 200
 }
 
@@ -98,19 +98,19 @@ class App {
     ]
 
     this.app.post(
-      '/newsposts',
+      '/api/newsposts',
       passport.authenticate('bearer', { session: false }),
       createUpdateMiddlewares,
       this.newsController.create
     )
 
     this.app.put(
-      '/newsposts/:id',
+      '/api/newsposts/:id',
       createUpdateMiddlewares,
       this.newsController.update
     )
     this.app.post(
-      '/auth/register',
+      '/api/auth/register',
       createUsersMiddlewares,
       this.usersController.registration
     )
@@ -118,12 +118,12 @@ class App {
     this.app.post('/api/logout', this.authController.logout)
 
     this.app.get(
-      '/user',
+      '/api/user',
       passport.authenticate('bearer', { session: false })
     )
 
     this.app.get(
-      '/newsposts/error',
+      '/api/newsposts/error',
       (_req: Request, _res: Response, next: NextFunction) => {
         try {
           throw new NewspostsServiceError('Error occurred in NewspostsService')
@@ -152,7 +152,7 @@ class App {
     )
 
     Object.keys(Routes).forEach((key: string) => {
-      this.app.use(`/${key}`, Routes[key])
+      this.app.use(`/api/${key}`, Routes[key])
     })
   }
 
