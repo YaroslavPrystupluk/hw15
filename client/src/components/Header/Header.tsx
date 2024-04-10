@@ -21,7 +21,7 @@ const Header: FC = () => {
           ></IconButton>
 
           <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
-            <Link style={{ textDecoration: "none" }} to={"/"}>
+            <Link style={{ textDecoration: "none", color: "white" }} to={"/"}>
               News
             </Link>
           </Typography>
