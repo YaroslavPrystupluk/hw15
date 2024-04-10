@@ -28,10 +28,10 @@ const validatorService = new Validator()
 
 const PORT: number | string = process.env.PORT || 3000
 const HOST: string = process.env.HOST || 'localhost'
-// const CORS_OPTIONS = {
-//   origin: 'https://hw15-newsposts.vercel.app',
-//   optionsSuccessStatus: 200
-// }
+const CORS_OPTIONS = {
+  origin: 'https://hw15-newsposts.vercel.app',
+  optionsSuccessStatus: 200
+}
 
 function logRequest (req: Request, _res: Response, next: NextFunction) {
   logger.info({
@@ -159,7 +159,7 @@ class App {
   initPlugins (): void {
     this.app.use(bodyParser.json())
     this.app.use(morgan('dev'))
-    this.app.use(cors())
+    this.app.use(cors(CORS_OPTIONS))
     this.app.use(logRequest)
   }
 
