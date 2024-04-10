@@ -83,6 +83,12 @@ class App {
 	// 	res.send('Hello World!')
 	// })
 
+	this.app.use((req, res, next) => {
+  res.header('Access-Control-Allow-Origin', 'https://hw15-newsposts.vercel.app');
+  res.header('Access-Control-Allow-Headers', 'Origin, X-Requested-With, Content-Type, Accept');
+  next()
+})
+
     const createUpdateMiddlewares = [
       validatorMiddleware({
         title: { type: 'string', min: 1, max: 50 },
