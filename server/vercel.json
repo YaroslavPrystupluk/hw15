@@ -1,15 +1,5 @@
 {
-  "devCommand": "npm run dev",
-  "builds": [{ "src": "/server.ts", "use": "@vercel/node" }],
-
-  "routes": [
-    { "src": "/(.*)", "dest": "server.ts",
-	 
-      "headers": {
-        "Access-Control-Allow-Origin": "*"
-      }
-    }
-  ],
-
-  "outputDirectory": "build"
+"rewrites": [
+    { "source": "/(.*)", "destination": "server.ts" }
+]
 }
