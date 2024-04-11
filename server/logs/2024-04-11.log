@@ -1,0 +1,52 @@
+{
+  message: { method: 'GET', url: '/', body: {} },
+  level: 'info',
+  timestamp: '2024-04-11T05:31:32.414Z'
+}
+{
+  message: "Cannot read properties of undefined (reading 'publicPath')",
+  stack: "TypeError: Cannot read properties of undefined (reading 'publicPath')\n" +
+    '    at MainController.getStartPage (D:\\Web\\Test task\\hw15\\server\\controllers\\main.controller.ts:12:33)\n' +
+    '    at Layer.handle [as handle_request] (D:\\Web\\Test task\\hw15\\server\\node_modules\\express\\lib\\router\\layer.js:95:5)\n' +
+    '    at next (D:\\Web\\Test task\\hw15\\server\\node_modules\\express\\lib\\router\\route.js:149:13)\n' +
+    '    at Route.dispatch (D:\\Web\\Test task\\hw15\\server\\node_modules\\express\\lib\\router\\route.js:119:3)\n' +
+    '    at Layer.handle [as handle_request] (D:\\Web\\Test task\\hw15\\server\\node_modules\\express\\lib\\router\\layer.js:95:5)\n' +
+    '    at D:\\Web\\Test task\\hw15\\server\\node_modules\\express\\lib\\router\\index.js:284:15\n' +
+    '    at Function.process_params (D:\\Web\\Test task\\hw15\\server\\node_modules\\express\\lib\\router\\index.js:346:12)\n' +
+    '    at next (D:\\Web\\Test task\\hw15\\server\\node_modules\\express\\lib\\router\\index.js:280:10)\n' +
+    '    at SendStream.error (D:\\Web\\Test task\\hw15\\server\\node_modules\\serve-static\\index.js:121:7)\n' +
+    '    at SendStream.emit (node:events:518:28)',
+  level: 'error',
+  timestamp: '2024-04-11T05:31:32.433Z'
+}
+{
+  message: { method: 'GET', url: '/favicon.ico', body: {} },
+  level: 'info',
+  timestamp: '2024-04-11T05:31:32.989Z'
+}
+{
+  message: { method: 'GET', url: '/', body: {} },
+  level: 'info',
+  timestamp: '2024-04-11T05:31:38.009Z'
+}
+{
+  message: "Cannot read properties of undefined (reading 'publicPath')",
+  stack: "TypeError: Cannot read properties of undefined (reading 'publicPath')\n" +
+    '    at MainController.getStartPage (D:\\Web\\Test task\\hw15\\server\\controllers\\main.controller.ts:12:33)\n' +
+    '    at Layer.handle [as handle_request] (D:\\Web\\Test task\\hw15\\server\\node_modules\\express\\lib\\router\\layer.js:95:5)\n' +
+    '    at next (D:\\Web\\Test task\\hw15\\server\\node_modules\\express\\lib\\router\\route.js:149:13)\n' +
+    '    at Route.dispatch (D:\\Web\\Test task\\hw15\\server\\node_modules\\express\\lib\\router\\route.js:119:3)\n' +
+    '    at Layer.handle [as handle_request] (D:\\Web\\Test task\\hw15\\server\\node_modules\\express\\lib\\router\\layer.js:95:5)\n' +
+    '    at D:\\Web\\Test task\\hw15\\server\\node_modules\\express\\lib\\router\\index.js:284:15\n' +
+    '    at Function.process_params (D:\\Web\\Test task\\hw15\\server\\node_modules\\express\\lib\\router\\index.js:346:12)\n' +
+    '    at next (D:\\Web\\Test task\\hw15\\server\\node_modules\\express\\lib\\router\\index.js:280:10)\n' +
+    '    at SendStream.error (D:\\Web\\Test task\\hw15\\server\\node_modules\\serve-static\\index.js:121:7)\n' +
+    '    at SendStream.emit (node:events:518:28)',
+  level: 'error',
+  timestamp: '2024-04-11T05:31:38.011Z'
+}
+{
+  message: { method: 'GET', url: '/', body: {} },
+  level: 'info',
+  timestamp: '2024-04-11T05:32:52.320Z'
+}
