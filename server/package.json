@@ -6,7 +6,8 @@
   "scripts": {
     "start": "nodemon server.ts",
     "server": "nodemon server.ts",
-    "build": "tsc",
+    "build": "rimraf dist && tsc",
+    "add-build": "git add dist",
     "build:client": "cd .. && cd client && npm run build",
     "typeorm": "typeorm-ts-node-commonjs",
     "seed:run": "ts-node ./node_modules/typeorm-extension/bin/cli.cjs seed:run -d ./data-source.ts",
@@ -53,5 +54,10 @@
     "eslint-plugin-react": "^7.34.1",
     "ts-node": "^10.9.2",
     "typescript": "^5.4.4"
-  }
+  },
+  "pre-commit": [
+      "ts.check",
+      "build",
+      "add-build"
+  ]
 }
