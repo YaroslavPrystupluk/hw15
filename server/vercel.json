@@ -1,5 +1,8 @@
 {
 "rewrites": [
     { "source": "/(.*)", "destination": "server.ts" }
-]
+],
+
+"outputDirectory": "build"
 }
+
