@@ -30,7 +30,8 @@ const PORT: number | string = process.env.PORT || 3000
 const HOST: string = process.env.HOST || 'localhost'
 const CORS_OPTIONS = {
   origin: '*',
-  optionsSuccessStatus: 200
+ credentials: true,
+  methods: ['GET', 'POST', 'PUT', 'DELETE']
 }
 
 function logRequest (req: Request, _res: Response, next: NextFunction) {
