@@ -1,1 +1,0 @@
-{"version":3,"file":"NewspostsServiceError.js","sourceRoot":"","sources":["../../errors/NewspostsServiceError.ts"],"names":[],"mappings":";;;;;;;;;;;;;;;;;;AAAA;IAAoC,yCAAK;IACvC,+BAAa,OAAe;QAC1B,YAAA,MAAK,YAAC,OAAO,CAAC,SAAA;QACd,KAAI,CAAC,IAAI,GAAG,sBAAsB,CAAA;;IACpC,CAAC;IACH,4BAAC;AAAD,CAAC,AALD,CAAoC,KAAK,GAKxC;AACQ,sDAAqB"}
