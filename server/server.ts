@@ -34,6 +34,7 @@ const CORS_OPTIONS = {
   methods: ['GET', 'POST', 'PUT', 'DELETE']
 }
 
+
 function logRequest (req: Request, _res: Response, next: NextFunction) {
   logger.info({
     method: req.method,
@@ -133,6 +134,8 @@ class App {
         }
       }
     )
+
+	 this.app.options('', cors(CORS_OPTIONS))
 
     this.app.use(
       (err: any, req: Request, res: Response, next: NextFunction) => {
