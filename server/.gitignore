@@ -8,4 +8,4 @@
 
 # Sentry Config File
 .sentryclirc
-.
+.env
