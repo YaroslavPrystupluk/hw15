@@ -78,10 +78,10 @@ class App {
 
   private routing (): void {
     this.app.use(express.static(path.join(this.publicPath)))
-   //  this.app.get('/', this.mainController.getStartPage)
-	this.app.get('/', (req: Request, res: Response) => {
-		res.send('Hello World!')
-	})
+    this.app.get('/', this.mainController.getStartPage)
+	// this.app.get('/', (req: Request, res: Response) => {
+	// 	res.send('Hello World!')
+	// })
 
     const createUpdateMiddlewares = [
       validatorMiddleware({
@@ -98,19 +98,19 @@ class App {
     ]
 
     this.app.post(
-      '/newsposts',
+      '/api/newsposts',
       passport.authenticate('bearer', { session: false }),
       createUpdateMiddlewares,
       this.newsController.create
     )
 
     this.app.put(
-      '/newsposts/:id',
+      '/api/newsposts/:id',
       createUpdateMiddlewares,
       this.newsController.update
     )
     this.app.post(
-      '/auth/register',
+      '/api/auth/register',
       createUsersMiddlewares,
       this.usersController.registration
     )
@@ -118,12 +118,12 @@ class App {
     this.app.post('/api/logout', this.authController.logout)
 
     this.app.get(
-      '/user',
+      '/api/user',
       passport.authenticate('bearer', { session: false })
     )
 
     this.app.get(
-      '/newsposts/error',
+      '/api/newsposts/error',
       (_req: Request, _res: Response, next: NextFunction) => {
         try {
           throw new NewspostsServiceError('Error occurred in NewspostsService')
@@ -152,7 +152,7 @@ class App {
     )
 
     Object.keys(Routes).forEach((key: string) => {
-      this.app.use(`/${key}`, Routes[key])
+      this.app.use(`/api/${key}`, Routes[key])
     })
   }
 
