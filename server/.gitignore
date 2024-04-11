@@ -1,5 +1,7 @@
 # dependencies
 /node_modules
+/build
+
 
 # Sentry Config File
 .sentryclirc
