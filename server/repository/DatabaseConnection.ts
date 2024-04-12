@@ -16,7 +16,7 @@ class DatabaseConnection {
   private constructor () {
     this.options = {
       type: 'postgres',
-		url: process.env.DATABASE_URL,
+		url: process.env.DB_URL,
       host: process.env.DB_HOST,
       username: process.env.DB_USERNAME,
       password: process.env.DB_PASSWORD,
