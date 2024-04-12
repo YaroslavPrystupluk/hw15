@@ -10,13 +10,13 @@ import { MainSeeders } from '../seeds'
 config()
 
 class DatabaseConnection {
-  private static instance: DatabaseConnection
+  private static readonly instance: DatabaseConnection
   private readonly options: DataSourceOptions & SeederOptions
   private readonly db: DataSource
   private constructor () {
     this.options = {
       type: 'postgres',
-		url: process.env.DB_URL,
+      url: process.env.DB_URL,
       host: process.env.DB_HOST,
       username: process.env.DB_USERNAME,
       password: process.env.DB_PASSWORD,
@@ -30,26 +30,16 @@ class DatabaseConnection {
       subscribers: []
     }
     this.db = new DataSource(this.options)
-
     this.db.initialize()
+
+    console.log('Data Source has been initialized!')
   }
 
   public static getInstance (): DatabaseConnection {
-    if (!DatabaseConnection.instance) {
-      DatabaseConnection.instance = new DatabaseConnection()
-    }
-    return DatabaseConnection.instance
+    return DatabaseConnection.instance ? DatabaseConnection.instance : new DatabaseConnection()
   }
 
   public async getDB () {
-    try {
-      if (this.db.isInitialized) {
-        return this.db
-      }
-      console.log('Data Source has been initialized!')
-    } catch (err) {
-      console.error('Error during Data Source initialization', err)
-    }
     return this.db
   }
 }
