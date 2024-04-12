@@ -2,7 +2,7 @@
   "name": "news",
   "version": "1.0.0",
   "description": "news list",
-  "main": "server.js",
+  "main": "dist/server.js",
   "scripts": {
     "start": "node dist/server.js",
     "server": "nodemon server.ts",
