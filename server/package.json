@@ -7,7 +7,7 @@
     "start": "node dist/server.js",
     "server": "nodemon server.ts",
     "dev": "nodemon --watch . --exec ts-node server.ts",
-    "build": "rimraf dist && tsc -p .",
+    "build": "tsc -p .",
     "ts.check": "tsc --project tsconfig.json",
     "add-build": "git add dist",
     "build:client": "cd .. && cd client && npm run build",
