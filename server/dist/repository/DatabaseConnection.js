@@ -35,6 +35,9 @@ var __generator = (this && this.__generator) || function (thisArg, body) {
         if (op[0] & 5) throw op[1]; return { value: op[0] ? op[1] : void 0, done: true };
     }
 };
+var __importDefault = (this && this.__importDefault) || function (mod) {
+    return (mod && mod.__esModule) ? mod : { "default": mod };
+};
 Object.defineProperty(exports, "__esModule", { value: true });
 /* eslint-disable eol-last */
 var typeorm_1 = require("typeorm");
@@ -43,6 +46,7 @@ require("reflect-metadata");
 var factories_1 = require("../factories");
 var entity_1 = require("../entity");
 var seeds_1 = require("../seeds");
+var path_1 = __importDefault(require("path"));
 (0, dotenv_1.config)();
 var DatabaseConnection = /** @class */ (function () {
     function DatabaseConnection() {
@@ -57,7 +61,7 @@ var DatabaseConnection = /** @class */ (function () {
             logging: false,
             factories: [factories_1.userFactory, factories_1.newpostsFactory],
             entities: [entity_1.User, entity_1.Newspost],
-            migrations: [],
+            migrations: [path_1.default.join(__dirname, '..', 'migrations/*.{ts,js}')],
             seeds: [seeds_1.MainSeeders],
             subscribers: []
         };

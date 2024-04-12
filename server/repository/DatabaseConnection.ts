@@ -6,6 +6,7 @@ import 'reflect-metadata'
 import { userFactory, newpostsFactory } from '../factories'
 import { Newspost, User } from '../entity'
 import { MainSeeders } from '../seeds'
+import path from 'path'
 
 config()
 
@@ -25,7 +26,7 @@ class DatabaseConnection {
       logging: false,
       factories: [userFactory, newpostsFactory],
       entities: [User, Newspost],
-      migrations: [],
+      migrations: [path.join(__dirname, '..', 'migrations/*.{ts,js}')],
       seeds: [MainSeeders],
       subscribers: []
     }
